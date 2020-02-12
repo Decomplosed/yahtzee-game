@@ -3,6 +3,8 @@ import './RuleRow.css'
 
 class RuleRow extends Component {
   render() {
+    const { scora, bame, doScore } = this.props
+    const disabled = score != undefined
     return (
       <tr
         className={`RuleRow RuleRow-${
