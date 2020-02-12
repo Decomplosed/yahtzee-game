@@ -16,7 +16,7 @@ class Die extends Component {
 
   render() {
     const { locked } = this.props
-
+    let classes = `fas fa-dice-${this.props.numWords[this.props.val - 1]}`
     return (
       <button
         className={'Die'}
