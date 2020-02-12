@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './Die.css'
 
 class Die extends Component {
+  static defaultProps = {
+    numWords: ['one', 'two', 'three', 'four', 'five', 'six']
+  }
   constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
