@@ -33,6 +33,7 @@ class Game extends Component {
     this.roll = this.roll.bind(this)
     this.doScore = this.doScore.bind(this)
     this.toggleLocked = this.toggleLocked.bind(this)
+    this.animateRoll = this.animateRoll.bind(this)
   }
 
   animateRoll() {
@@ -94,7 +95,7 @@ class Game extends Component {
                 disabled={
                   this.state.locked.every(x => x) || this.state.rollsLeft === 0
                 }
-                onClick={this.roll}
+                onClick={this.animateRoll}
               >
                 {this.state.rollsLeft} Rerolls Left
               </button>
