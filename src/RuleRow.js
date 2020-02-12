@@ -7,10 +7,8 @@ class RuleRow extends Component {
     const disabled = score != undefined
     return (
       <tr
-        className={`RuleRow RuleRow-${
-          score === undefined ? 'active' : 'disabled'
-        }`}
-        onClick={score === undefined ? doScore : null}
+        className={`RuleRow RuleRow-${disabled ? 'disabled' : 'active'}`}
+        onClick={disabled ? null : doScore}
       >
         <td className='RuleRow-name'>{name}</td>
         <td className='RuleRow-score'>{score}</td>
